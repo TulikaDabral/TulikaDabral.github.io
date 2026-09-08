@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tulika Dabral | Software Engineering Intern</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px -10px rgba(96, 165, 250, 0.25);
+    }
+    
+    .skill-tag {
+      transition: all 0.2s ease;
+    }
+    .skill-tag:hover {
+      transform: scale(1.05);
+      background: #3b82f6;
+      color: white;
+    }
+    
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background: #60a5fa;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 3px;
+      bottom: -8px;
+      left: 0;
+      background: linear-gradient(90deg, #60a5fa, transparent);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-200">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#home" class="text-xl font-bold gradient-text">Tulika Dabral</a>
+      <div class="hidden md:flex gap-8 text-sm font-medium">
+        <a href="#about" class="nav-link hover:text-blue-400">About</a>
+        <a href="#skills" class="nav-link hover:text-blue-400">Skills</a>
+        <a href="#projects" class="nav-link hover:text-blue-400">Projects</a>
+        <a href="#education" class="nav-link hover:text-blue-400">Education</a>
+        <a href="#achievements" class="nav-link hover:text-blue-400">Achievements</a>
+        <a href="#contact" class="nav-link hover:text-blue-400">Contact</a>
+      </div>
+      <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full text-sm font-medium transition">
+        Hire Me
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center pt-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-blue-400 font-medium mb-3"></p>
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-4">
+          <span class="gradient-text">Tulika Dabral</span>
+        </h1>
+        <h2 class="text-2xl md:text-3xl font-semibold text-slate-300 mb-6">
+          Final-Year CSE Student<br>
+          <span class="text-lg text-slate-400">Full-Stack Developer | AWS Certified</span>
+        </h2>
+        <p class="text-slate-400 text-lg leading-relaxed mb-8 max-w-lg">
+          Building scalable applications with React, Node.js & Express.js.  
+          Strong in DSA, OS, and growing in Machine Learning & Generative AI.  
+          Seeking a Software Engineering Internship.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#projects" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-full font-medium transition flex items-center gap-2">
+            View Projects <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="border border-slate-600 hover:border-blue-500 text-slate-300 hover:text-blue-400 px-8 py-3 rounded-full font-medium transition">
+            Contact Me
+          </a>
+        </div>
+        <div class="flex gap-6 mt-10 text-slate-400">
+          <a href="mailto:tulikadabral26@gmail.com" class="hover:text-blue-400 transition" title="Email">
+            <i class="fas fa-envelope text-xl"></i>
+          </a>
+          <a href="tel:+917900357014" class="hover:text-blue-400 transition" title="Phone">
+            <i class="fas fa-phone text-xl"></i>
+          </a>
+          <a href="#" class="hover:text-blue-400 transition" title="LinkedIn">
+            <i class="fab fa-linkedin text-xl"></i>
+          </a>
+          <a href="#" class="hover:text-blue-400 transition" title="GitHub">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hidden md:flex justify-center">
+        <div class="relative">
+          <div class="w-72 h-72 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-slate-700 flex items-center justify-center">
+            <div class="w-56 h-56 rounded-full bg-slate-900 border border-slate-700 flex items-center justify-center">
+              <span class="text-6xl font-bold gradient-text">TD</span>
+            </div>
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-slate-900 border border-slate-700 px-4 py-2 rounded-xl text-sm">
+            <span class="text-green-400">●</span> Open to Internships
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 bg-slate-900/50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12 section-title">About Me</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-2 text-slate-300 leading-relaxed space-y-4">
+          <p>
+            Final-year Computer Science Engineering student at Graphic Era Hill University, Dehradun, 
+            with hands-on full-stack development experience in React, Node.js, and Express.js.
+          </p>
+          <p>
+            Strong foundations in Data Structures, Algorithms, and Operating Systems.  
+            AWS Certified Cloud Practitioner with growing exposure to Machine Learning and Generative AI.
+          </p>
+          <p>
+            Passionate about building scalable, real-world applications and solving complex problems 
+            through clean, efficient code. Currently seeking a Software Engineering Internship.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-slate-800/50 p-5 rounded-xl border border-slate-700">
+            <p class="text-slate-400 text-sm">Location</p>
+            <p class="font-medium">Dehradun, Uttarakhand</p>
+          </div>
+          <div class="bg-slate-800/50 p-5 rounded-xl border border-slate-700">
+            <p class="text-slate-400 text-sm">Email</p>
+            <p class="font-medium text-sm">tulikadabral26@gmail.com</p>
+          </div>
+          <div class="bg-slate-800/50 p-5 rounded-xl border border-slate-700">
+            <p class="text-slate-400 text-sm">Phone</p>
+            <p class="font-medium">+91 7900357014</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12 section-title">Technical Skills</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Languages -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 card-hover">
+          <h3 class="text-blue-400 font-semibold mb-4 flex items-center gap-2">
+            <i class="fas fa-code"></i> Languages
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">C</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">C++</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">Python</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">JavaScript</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">Java</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">HTML</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">CSS</span>
+          </div>
+        </div>
+
+        <!-- Frameworks -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 card-hover">
+          <h3 class="text-blue-400 font-semibold mb-4 flex items-center gap-2">
+            <i class="fas fa-layer-group"></i> Frameworks & Libraries
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">Next.js</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">React</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">Node.js</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">Express.js</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">Socket.IO</span>
+          </div>
+        </div>
+
+        <!-- Databases & Tools -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 card-hover">
+          <h3 class="text-blue-400 font-semibold mb-4 flex items-center gap-2">
+            <i class="fas fa-database"></i> Databases & Tools
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">PostgreSQL</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">Docker</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">Git</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">GitHub</span>
+          </div>
+        </div>
+
+        <!-- Cloud & AI -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 card-hover">
+          <h3 class="text-blue-400 font-semibold mb-4 flex items-center gap-2">
+            <i class="fas fa-cloud"></i> Cloud & AI
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">AWS (Certified)</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">Machine Learning</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">Generative AI</span>
+          </div>
+        </div>
+
+        <!-- CS Fundamentals -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 card-hover md:col-span-2">
+          <h3 class="text-blue-400 font-semibold mb-4 flex items-center gap-2">
+            <i class="fas fa-brain"></i> CS Fundamentals
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">Data Structures & Algorithms</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">Operating Systems</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">OOPs</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">Cybersecurity</span>
+            <span class="skill-tag bg-slate-800 px-3 py-1.5 rounded-lg text-sm">Network Security</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-24 bg-slate-900/50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12 section-title">Featured Projects</h2>
+      
+      <div class="space-y-8">
+         <!-- Project 1: Explainable AI Skin Disease Diagnosis -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden card-hover">
+          <div class="h-2 bg-gradient-to-r from-violet-500 to-fuchsia-500"></div>
+          <div class="p-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+              <div>
+                <h3 class="text-2xl font-bold">Explainable AI for Skin Disease Diagnosis</h3>
+                <p class="text-violet-400 mt-1">Deep Learning + Multi-Lens XAI Framework — Industrial Internship</p>
+              </div>
+              <span class="text-slate-400 text-sm mt-2 md:mt-0 bg-slate-800 px-4 py-1.5 rounded-full">2026</span>
+            </div>
+            <p class="text-slate-300 leading-relaxed mb-5">
+              Led the development phase of a 6-week industrial internship building an explainable deep learning 
+              framework for dermatology, trained on the ISIC 2019 skin lesion dataset. Co-authored a research 
+              paper on the framework with faculty supervision at Graphic Era Deemed to be University.
+            </p>
+            <ul class="space-y-2 text-slate-400 text-sm mb-6">
+              <li class="flex gap-2"><span class="text-violet-400">▹</span> Trained and compared EfficientNet-B3, ResNet-50, and Vision Transformer architectures on medical image data</li>
+              <li class="flex gap-2"><span class="text-violet-400">▹</span> Built a multi-lens explainability pipeline combining Grad-CAM, LIME, and SHAP to make predictions interpretable</li>
+              <li class="flex gap-2"><span class="text-violet-400">▹</span> Designed a human-in-the-loop review interface so dermatologists validate every AI-flagged case before it reaches a patient</li>
+              <li class="flex gap-2"><span class="text-violet-400">▹</span> Evaluated model fairness across Fitzpatrick skin tone groups and documented dataset bias limitations</li>
+            </ul>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">Python</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">PyTorch</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">EfficientNet / ResNet / ViT</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">Grad-CAM</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">LIME</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">SHAP</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+        <!-- Project 2: DataScript Compiler -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden card-hover">
+          <div class="h-2 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
+          <div class="p-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+              <div>
+                <h3 class="text-2xl font-bold">DataScript Compiler</h3>
+                <p class="text-blue-400 mt-1">Custom DSL for CSV Data Processing</p>
+              </div>
+              <span class="text-slate-400 text-sm mt-2 md:mt-0 bg-slate-800 px-4 py-1.5 rounded-full">2026</span>
+            </div>
+            <p class="text-slate-300 leading-relaxed mb-5">
+              Built a compiler-based data processing system with a custom Domain Specific Language (DSL), 
+              enabling users to upload CSV files and perform transformations without writing complex code.
+            </p>
+            <ul class="space-y-2 text-slate-400 text-sm mb-6">
+              <li class="flex gap-2"><span class="text-blue-400">▹</span> Designed and implemented core compiler components — lexer, parser, and executor</li>
+              <li class="flex gap-2"><span class="text-blue-400">▹</span> Tokenize, validate, and execute DSL commands for filtering, renaming, sorting, and column deletion</li>
+              <li class="flex gap-2"><span class="text-blue-400">▹</span> Full-stack solution with Flask backend + Pandas and responsive HTML/CSS/JS frontend</li>
+            </ul>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">Python</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">Flask</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">Pandas</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">HTML/CSS/JS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Travel Guide -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden card-hover">
+          <div class="h-2 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
+          <div class="p-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+              <div>
+                <h3 class="text-2xl font-bold">Interactive Travel & Tourism Guide</h3>
+                <p class="text-emerald-400 mt-1">Dehradun Tourism Desktop App</p>
+              </div>
+              <span class="text-slate-400 text-sm mt-2 md:mt-0 bg-slate-800 px-4 py-1.5 rounded-full">2025</span>
+            </div>
+            <p class="text-slate-300 leading-relaxed mb-5">
+              Desktop travel-planning app for Dehradun tourism featuring advanced data structures and algorithms 
+              for optimal route planning and place recommendations.
+            </p>
+            <ul class="space-y-2 text-slate-400 text-sm mb-6">
+              <li class="flex gap-2"><span class="text-emerald-400">▹</span> Custom Binary Search Tree for rating-based place lookup</li>
+              <li class="flex gap-2"><span class="text-emerald-400">▹</span> A* search algorithm for shortest-path route optimization</li>
+              <li class="flex gap-2"><span class="text-emerald-400">▹</span> Interactive Map with Folium + weather, parking prediction & multilingual voice translation</li>
+            </ul>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">Python</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">Custom Tkinter</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">Folium</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">A* Algorithm</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">BST</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Ethical Hacking Tool -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden card-hover">
+          <div class="h-2 bg-gradient-to-r from-red-500 to-pink-500"></div>
+          <div class="p-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+              <div>
+                <h3 class="text-2xl font-bold">Ethical Hacking & Vulnerability Assessment Tool</h3>
+                <p class="text-red-400 mt-1">Web Penetration Testing Tool</p>
+              </div>
+              <span class="text-slate-400 text-sm mt-2 md:mt-0 bg-slate-800 px-4 py-1.5 rounded-full">2025</span>
+            </div>
+            <p class="text-slate-300 leading-relaxed mb-5">
+              Developed a web penetration testing tool to detect critical vulnerabilities including SQL Injection, 
+              Cross-Site Scripting (XSS), and Directory Brute-Force attacks.
+            </p>
+            <ul class="space-y-2 text-slate-400 text-sm mb-6">
+              <li class="flex gap-2"><span class="text-red-400">▹</span> High-performance multithreaded scanning engine using Java Executor Service</li>
+              <li class="flex gap-2"><span class="text-red-400">▹</span> Significantly reduced scan time through parallel task execution</li>
+              <li class="flex gap-2"><span class="text-red-400">▹</span> Swing-based GUI with automated HTML report generation for non-technical stakeholders</li>
+            </ul>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">Java SE</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">Java Swing</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">Executor Service</span>
+              <span class="text-xs bg-slate-800 px-3 py-1 rounded-full">Multithreading</span>
+            </div>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12 section-title">Education</h2>
+      
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 card-hover max-w-3xl">
+        <div class="flex flex-col md:flex-row md:items-center justify-between">
+          <div>
+            <h3 class="text-xl font-bold">B.Tech - Computer Science & Engineering</h3>
+            <p class="text-blue-400 mt-1">Graphic Era Hill University, Dehradun</p>
+          </div>
+          <div class="mt-4 md:mt-0 text-right">
+            <p class="text-slate-400 text-sm">Aug 2023 – June 2027</p>
+            <p class="text-green-400 font-semibold mt-1">CGPA: 8.31 / 10.0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements" class="py-24 bg-slate-900/50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12 section-title">Certifications, Achievements & Extracurriculars</h2>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-cloud text-blue-400 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">AWS Certified</h3>
+          <p class="text-slate-400 text-sm">Cloud Practitioner – Amazon Web Services</p>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-briefcase text-purple-400 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">ServiceNow Virtual Internship</h3>
+          <p class="text-slate-400 text-sm">ServiceNow University, AICTE & Smartbridge – Administration & Agentic AI</p>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-trophy text-emerald-400 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Hack-a-Holic 4.0</h3>
+          <p class="text-slate-400 text-sm">Presented Bonfire Hub campus management platform – strong teamwork & problem-solving</p>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 card-hover md:col-span-3">
+          <div class="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center mb-4">
+            <i class="fas fa-robot text-pink-400 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Machine Learning Certification</h3>
+          <p class="text-slate-400 text-sm">Foundational knowledge of supervised learning, unsupervised learning, and model training</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Let's Connect</h2>
+      <p class="text-slate-400 mb-10 text-lg">
+        I'm actively looking for Software Engineering Internships (paid or unpaid).  
+        Open to remote, hybrid, or on-site opportunities. Let's build something impactful together!
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <a href="mailto:tulikadabral26@gmail.com" 
+           class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3.5 rounded-full font-medium transition flex items-center justify-center gap-2">
+          <i class="fas fa-envelope"></i> tulikadabral26@gmail.com
+        </a>
+        <a href="tel:+917900357014" 
+           class="border border-slate-600 hover:border-blue-500 text-slate-300 hover:text-blue-400 px-8 py-3.5 rounded-full font-medium transition flex items-center justify-center gap-2">
+          <i class="fas fa-phone"></i> +91 7900357014
+        </a>
+      </div>
+      <div class="flex justify-center gap-6 text-slate-400">
+        <a href="#" class="hover:text-blue-400 transition text-2xl" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="#" class="hover:text-blue-400 transition text-2xl" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <p class="text-slate-500 text-sm mt-8">Based in Dehradun, Uttarakhand • Open to opportunities across India & remote</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+    <p>© 2026 Tulika Dabral. Built with passion for clean code & real-world impact.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
